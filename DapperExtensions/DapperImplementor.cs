@@ -794,7 +794,7 @@ namespace DapperExtensions
 
         protected bool InternalDelete<T>(IDbConnection connection, T entity, IDbTransaction transaction, int? commandTimeout) where T : class
         {
-            GetMapAndPredicate<T>(entity, out var classMap, out var predicate, true);
+            GetMapAndPredicate<T>(entity, out var classMap, out var predicate);
 
             return Delete<T>(connection, classMap, predicate, transaction, commandTimeout);
         }

@@ -270,7 +270,7 @@ namespace DapperExtensions
         /// </summary>
         public static Task<bool> DeleteAsync<T>(this IDbConnection connection, object predicate, IDbTransaction transaction = null, int? commandTimeout = null) where T : class
         {
-            return Instance.DeleteAsync(connection, predicate, transaction, commandTimeout);
+            return Instance.DeleteAsync<T>(connection, predicate, transaction, commandTimeout);
         }
 
         /// <summary>
